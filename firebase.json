@@ -1,0 +1,8 @@
+{
+  "firebase": "dev-todo",
+  "public": "dist",
+  "rewrites": [{
+    "source": "**",
+    "destination": "/index.html"
+  }]
+}

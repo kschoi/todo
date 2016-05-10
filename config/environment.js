@@ -4,6 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'todo',
     environment: environment,
+    contentSecurityPolicy: {
+        'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
+    },
+    firebase: 'https://dev-todo.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
