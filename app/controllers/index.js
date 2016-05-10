@@ -3,23 +3,19 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  headerMessage: 'Coming Soon',
+  headerMessage: 'To Do',
   responseMessage: '',
-  emailAddress: '',
-
-  isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
-  isDisabled: Ember.computed.not('isValid'),
+  task: '',
 
   actions: {
 
     saveInvitation() {
-      const task = this.get('emailAddress');
+      const task = this.get('task');
 
       const newInvitation = this.store.createRecord('todo', { task: task });
       newInvitation.save();
 
-      this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')}`);
-      this.set('emailAddress', '');
+      this.set('responseMessage', `We've just saved your email address: ${this.get('task')}`);
     }
   }
 }); 
