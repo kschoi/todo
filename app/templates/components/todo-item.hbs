@@ -1,0 +1,20 @@
+<div>
+	{{#if item.isEditing}}
+		{{todo-form item=item task=item.task buttonLabel='edit' action='updateTodo'}}
+	{{else}}
+		<h4 class={{if completed 'strike'}}>
+			{{input type="checkbox" checked=completed class="toggle"}}
+			{{item.task}}
+			<div class="actions">
+				<a {{action 'editTodo' item}} href class="edit-todo">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</a>
+				<a {{action 'deleteTodo' item}} href class="remove-todo">
+					<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			</div>
+		</h4>
+	{{/if}}
+</div>
+
+<hr>

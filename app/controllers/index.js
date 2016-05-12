@@ -3,19 +3,20 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  headerMessage: 'To Do',
-  responseMessage: '',
-  task: '',
+	newTask: '',
 
-  actions: {
-
-    saveInvitation() {
-      const task = this.get('task');
-
-      const newInvitation = this.store.createRecord('todo', { task: task });
-      newInvitation.save();
-
-      this.set('responseMessage', `We've just saved your email address: ${this.get('task')}`);
-    }
-  }
+	actions: {
+		addTodo() {
+			var _this = this;
+			var todo = this.store.createRecord('todo', {
+				task: _this.get('newTask'),
+				completed: false
+			});
+			todo.save().then((response) =>{
+				//this.notify.success('created new task');
+				this.set('newTask', '');
+			});
+		}
+	}
+	
 }); 

@@ -1,5 +1,50 @@
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:700);
 
 body {
-  padding-top: 20px;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 70px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: white !important;
+}
+
+.navbar {
+  background: #e1563f top center;
+}
+
+.form-inline .form-group input {
+  width: 250px;
+}
+
+#todos {
+  margin-top: 25px;
+}
+
+#todos li {
+  margin-top: 15px;
+}
+
+.actions {
+  float: right;
+  a {
+    margin-left: 10px;
+  }
+}
+
+.remove-todo {
+  color: red;
+  font-size: 1.25rem;
+}
+
+.edit-todo {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.strike {
+  text-decoration: line-through;
 }

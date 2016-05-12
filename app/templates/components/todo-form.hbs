@@ -1,0 +1,7 @@
+<form class="form-inline">
+	<div class="form-group">
+		{{input type='text' placeholder='Task name' value=task class='form-control'}}
+	</div>
+	<button {{action 'submitClicked' item}} class="btn btn-primary">{{buttonLabel}}</button>
+	<button {{action 'cancelClicked' item}} class="btn btn-primary">cancel</button>
+</form>
