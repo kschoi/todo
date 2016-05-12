@@ -7,9 +7,6 @@ export default Ember.Component.extend({
   actions: {
     submitClicked(param) {
       this.sendAction('action', param);
-    },
-    cancelClicked(param) {
-      this.sendAction('action', param);
     }
   }
 

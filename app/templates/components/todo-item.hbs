@@ -1,6 +1,8 @@
 <div>
 	{{#if item.isEditing}}
-		{{todo-form item=item task=item.task buttonLabel='edit' action='updateTodo'}}
+		{{#todo-form item=item task=item.task buttonLabel='edit' action='updateTodo'}}
+		<button {{action 'cancel' item}} class="btn btn-primary">cancel</button>
+		{{/todo-form}}
 	{{else}}
 		<h4 class={{if completed 'strike'}}>
 			{{input type="checkbox" checked=completed class="toggle"}}
