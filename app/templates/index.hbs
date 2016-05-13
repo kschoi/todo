@@ -19,8 +19,7 @@
 					<div id="todos">
 
 						{{#each model as |todo|}}
-							{{#todo-item item=todo}}
-							{{/todo-item}}
+							{{todo-item item=todo}}
 						{{else}}
 							<h4>No Tasks to do</h4>
 						{{/each}}
