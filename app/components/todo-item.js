@@ -16,8 +16,9 @@ export default Ember.Component.extend({
 	}.property('model.completed'),
 	*/
 	completed: '',
-	completedChanged: Ember.observer('completed', function(){
-		console.log('ovserver is called', this.get('completed'));
+	completedChanged: Ember.observer('item.completed', function(){
+		let item = this.get('item');
+		item.save();
 	}),
 	actions: {
 		deleteTodo(todo) {
