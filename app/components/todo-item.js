@@ -15,7 +15,6 @@ export default Ember.Component.extend({
 		}
 	}.property('model.completed'),
 	*/
-	completed: '',
 	completedChanged: Ember.observer('item.completed', function(){
 		let item = this.get('item');
 		item.save();
