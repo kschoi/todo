@@ -8,6 +8,9 @@ module.exports = function(environment) {
         'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
     },
     firebase: 'https://dev-todo.firebaseio.com/',
+    torii: {
+      sessionServiceName: 'session'
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
